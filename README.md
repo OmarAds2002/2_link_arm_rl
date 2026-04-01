@@ -17,8 +17,7 @@
 │           └── src/controller_node.cpp   # ROS2 C++ node for policy inference
 ├── python_sim/
 │   └── mujoco_node.py       # Python MuJoCo simulation node
-├── rl_env/
-│   ├── **pycache**/
+├── env/
 │   ├── arm_env.py           # Custom Gym environment
 │   └── twolink.xml          # MuJoCo model file
 ├── requirements.txt         # Python dependencies
