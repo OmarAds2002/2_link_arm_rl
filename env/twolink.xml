@@ -1,0 +1,28 @@
+<!-- env/twolink.xml -->
+<mujoco model="two_link_arm">
+    <option timestep="0.01"/>
+
+    <worldbody>
+        <body name="link1" pos="0 0 0">
+            <joint name="shoulder" type="hinge" axis="0 0 1"/>
+            <geom type="capsule" fromto="0 0 0 0.5 0 0" size="0.05"/>
+
+            <body name="link2" pos="0.5 0 0">
+                <joint name="elbow" type="hinge" axis="0 0 1"/>
+                <geom type="capsule" fromto="0 0 0 0.5 0 0" size="0.04"/>
+
+                <!-- end-effector site at tip of link2 -->
+                <site name="end_effector" pos="0.5 0 0" size="0.03" rgba="0 1 0 1"/>
+            </body>
+        </body>
+
+        <!-- target site in world frame, moved programmatically -->
+        <site name="target" pos="0.8 0.3 0" size="0.04" rgba="1 0 0 1"/>
+    </worldbody>
+
+    <actuator>
+        <!-- match ctrlrange to action_space [-1, 1] -->
+        <motor joint="shoulder" ctrlrange="-1 1" gear="3"/>
+        <motor joint="elbow"    ctrlrange="-1 1" gear="3"/>
+    </actuator>
+</mujoco>

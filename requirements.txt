@@ -1,0 +1,16 @@
+# Core dependencies
+numpy
+torch
+gymnasium
+mujoco
+
+# Reinforcement Learning
+tianshou
+
+# ROS2 Python client
+rclpy
+sensor_msgs
+std_msgs
+
+# Logging
+tensorboard
