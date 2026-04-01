@@ -1,0 +1,38 @@
+# ── Python virtual environment ──────────────────────────────
+rlenv/
+venv/
+.env/
+.envrc
+
+# ── Python cache ───────────────────────────────────────────
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.pkl
+*.pickle
+
+# ── Logs, TensorBoard, and checkpoints ─────────────────────
+log/
+checkpoint/
+*.log
+*.out
+*.err
+
+# ── ROS2 build artifacts ───────────────────────────────────
+build/
+install/
+log/
+*.bag
+
+# ── System files ──────────────────────────────────────────
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+
+# ── IDE / Editor ──────────────────────────────────────────
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
